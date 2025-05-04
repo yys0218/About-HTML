@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+	ul.list { margin:20px }
+  </style>
+ </head>
+
+ <body>
+ <h1 align=center><a href="D:/YOON/web/00html/ex00.html">About HTML</a></h1>
+ <hr width=100% color=skyblue size=3 align=center>
+	<h2>< table ></h2>
+	: 표를 만들 때 사용<br>
+	- < table >내 요소 3가지로 표가 만들어짐<br>
+	ㄴ < tr > :표의 한 행(가로줄) Table Rows<br>
+	&nbsp;&nbsp;ㄴ < td > : 표의 칸 Table Data<br>
+	&nbsp;&nbsp;&nbsp;ㄴ < th > : 표의 제목 (표 맨 위에서 항목을 분류) Table Head(Title)<br>
+	<br>
+	<b>table에서 사용 가능한 속성</b><br>
+		bgcolor="색상값" : 표의 바탕색 / 색상명 혹은 값 <br>
+		width="표 전체 가로 길이" : 표의 너비 / 픽셀 혹은 백분율로 지정<br>
+		height="표 전체 세로 길이" : 표의 높이 / 픽셀 혹은 백분율로 지정<br>
+		border="두께" : 표의 테두리 두께 / 픽셀로 지정<br>
+		ㄴ미지정시 기본적으로, <i>테두리는 안보이는 상태</i><br>
+		ㄴborder-collapse:collapse : 기본 2중으로 보여지는 테두리를 실선으로 바꿈 *기본값:separate<br>
+		cellspacing="간격" : 표의 칸 사이의 간격 / 픽셀로 지정<br>
+		cellpadding="간격" : 칸 안에서 간격 / 픽셀로 지정<br>
+	<br>
+	<b>< tr ></b><br>
+	: 표의 한 행이 되는 태그<br>
+	-<b>table 내에서 반드시 한 쌍< tr >< /tr >이상</b> 존재해야함<br>
+	<br>
+	<b>tr 태그에서 사용 가능한 속성</b><br>
+		bgcolor="색상": 표 한 행의 바탕색 / 색상명 혹은 값<br>
+		width="가로길이": 한 행의 폭을 지정<br>
+		height="세로길이": 한 행의 높이를 지정<br>
+		align=left / center / right <br>
+				:한 행에서 내용의 수평 정렬<br>
+		valign=top / middle / bottom <br>
+				:한 행에서 내용의 수직 정렬<br>
+	<br>
+	<b>< td > , < th ></b><br>
+	-표의 제목(th) 요소도 표의 칸(td)의 한 종류임.<br>
+	-<b><i>< td >가 1개도 들어있지 않은 < tr >은 표로 만들어지지 않음.</i></b><br>
+	-< th >는 가운데정렬이 기본값임<br>
+	<br>
+	<b>td태그가 사용 가능한 속성</b><br>
+		bgcolor="색상" : 칸의 바탕색 <br>
+		background="url" : 칸의 배경 이미지<br>
+		width="가로" : 칸의 폭을 지정<br>
+		height="세로" : 칸의 높이 지정<br>
+		align=left / center / right<br> 
+		: 칸 내용의 수평 정렬 지정 - 디폴트 left<br>
+		valign=top / middle / bottom<br> 
+		: 칸 내용의 수직 정렬 지정 - 디폴트 middle<br>
+		colspan="가로로 합칠 칸의 갯수" : 해당 칸에서부터 가로 통합할 칸의 갯수 지정<br>
+		rowspan="세로로 합칠 칸의 갯수" : 해당 칸에서부터 세로 통합할 칸의 갯수 지정<br>
+		ㄴ오른쪽으로만 통합됨! 칸 개수 잘 볼것<br>
+	<br>
+	
+	<font color=green>< table ></font><br>
+	<div style = "display:inline-block;" >
+	<table>
+	<tr>
+		<td><font color=green>< tr ></font></td>
+	</tr>
+	<tr>
+		<td><font color=green>< tr ></font></td>
+	</tr>
+	</table>
+	</div>
+	<div style = "display:inline-block;" >
+		<table border="1">
+		<tr>
+			<th>
+			<font color=green>< th ></font>
+			1번 행 1번 칸 th
+			<font color=green>< /th ></font>
+			</th>
+			<th>
+			<font color=green>< th ></font>
+			1번 행 2번 칸 th
+			<font color=green>< /th ></font>
+			</th>
+		</tr>
+		<tr>
+			<td>
+			<font color=green>< td ></font>
+			2번 행 1번 칸 td
+			<font color=green>< /td ></font>
+			</td>
+			<td>
+			<font color=green>< td ></font>
+			2번 행 1번 칸 th
+			<font color=green>< /td ></font>
+			</td>
+		</tr>
+		</table>
+	</div>
+	<div style = "display:inline-block;" >
+	<table>
+	<tr>
+		<td><font color=green>< /tr ></font></td>
+	</tr>
+	<tr>
+		<td><font color=green>< /tr ></font></td>
+	</tr>
+	</table>
+	</div><br>
+	<font color=green>< /table ></font>
+	<br>
+	<h4>>>모든 속성은 브라우저에 따라 표현의 차이가 있다</h4>
+ <hr width=100%>
+<!--<pre></pre>-->
+ </body>
+</html>

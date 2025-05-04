@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+</head>
+
+ <body>
+ <h1 align=center><a href="">About HTML</a></h1>
+ <hr width=100% color=skyblue size=3 align=center>
+	<h2>< form ></h2>
+	<b>< button ></b><br>
+	:클릭할 수 있는 버튼을 정의<br>
+	-텍스트나 이미지와 같은 콘텐츠를 삽입할 수 있음<br>
+	-브라우저별로 < button >에 대한 기본 타입이 다를 수 있으므로, <u>type 속성값을 명시</u>하는 것이 좋다.<br>
+	</p>
+	<p>
+	button 태그의 속성 - 이름과 값<br>
+	name="이름" : button요소의 이름 - 태그의 데이터 참조시 변수명처럼 사용됨.<br>
+	*<i>같은 이름을 가진 여러개의 button 요소가 각각 다른값을 가질 수도 있음</i><br>
+	value="값" : button의 초기값 - 버튼 선택 시 제출되는 데이터 값<br>
+	</p>
+	<p>
+	button 태그의 속성 - type=~<br>
+	="button" : 클릭할 수 있는 버튼<br>
+	="submit" : 폼 데이터를 제출하는 버튼 - 입력이 완료됐으니, 지정된 액션을 실행한다는 의미를 가짐<br>
+	="reset" : 폼 데이터를 초기값으로 리셋하는(입력사항을 지우는) 리셋 버튼<br>
+	<i>< button >이 속해있는 form 태그 안에서만 적용됨!</i><br>
+	</p>
+
+	<a href="https://codingbear-boza.tistory.com/entry/HTML-input-button-%EA%B3%BC-button%EC%9D%98-%EC%B0%A8%EC%9D%B4%EC%A0%90"><h4>*< input type=button > 과 < button >의 차이*</h4></a>
+	
+	<b>< select > , < option ></b><br>
+	:옵션 메뉴를 제공하는 드롭다운 리스트를 정의<br>
+	-select 태그는 option 태그를 요소로 함<br>
+	<p>
+	< select >의 속성<br>
+	name="이름" : 요소의 이름<br>
+	size="한 번에 보일 옵션의 개수" : 옵션을 스크롤 형태로 보여주고, 그 때 보여질 < option > 의 개수를 지정<br>
+	ㄴ<i>미지정시 일반 선택창 형태(클릭시 전체 옵션이 보여짐)</i><br>
+	< option >의 속성<br>
+	- 아무 속성도 명시하지 않아도 되지만, 서버로 제출되는 값을 명시해주는 것이 일반적<br>
+	value="값": 요소의 값<br>
+	</p>
+	<!--사용 예 설명 위한 태그 가시화-->
+	<span class="tag"><xmp><form></xmp></span><span><font color="black">통신사 선택</font></span><br>
+	<span class="tag"><xmp><select name="choice"></xmp>
+	<xmp><option value="KT"></xmp></span><span><font color="black">KT</font></span><span class="tag"><xmp></option></xmp></span><br>
+	<span class="tag"><xmp><option value="U+"></xmp></span><span><font color="black">U+</font></span><span class="tag"><xmp></option></xmp></span><br>
+	<span class="tag"><xmp><option value="SKT"></xmp></span><span><font color="black">SKT</font></span><span class="tag"><xmp></option></xmp></span><br>
+	<span class="tag"><xmp><option value="알뜰폰"></xmp></span><span><font color="black">알뜰폰</font></span><span class="tag"><xmp></option></xmp></span><br>
+	<span class="tag"><xmp></select></xmp>
+	<xmp><button type="submit"></xmp></span><span><font color="black">선택 완료</font></span><span class="tag"><xmp></button></xmp></span><br>
+	<span class="tag"><xmp><button type="reset"></xmp></span><span><font color="black">다시 선택</font></span><span class="tag"><xmp></button></xmp></span><br>
+	<span class="tag"><xmp></form></xmp></span>
+	
+	<form>통신사 선택
+		<select name="choice">
+			<option value="KT">KT</option>
+			<option value="U+">U+</option>
+			<option value="SKT">SKT</option>
+			<option value="알뜰폰">알뜰폰</option>
+		</select>
+		<button type="submit">선택 완료</button>
+		<button type="reset">다시 선택</button>
+	</form>
+	<br>
+<hr width=100%>
+<pre>
+</pre>
+ </body>
+</html>

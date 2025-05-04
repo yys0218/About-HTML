@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+</head>
+
+ <body>
+ <h1 align=center><a href="D:/YOON/web/00html/ex00.html">About HTML</a></h1>
+ <hr width=100% color=skyblue size=3 align=center>
+  <h2> HTML 문서의 목록</h2>
+  : 상위와 하위가 있는 체계화된 목록을 만들 때 사용<br>
+  - 정의 목록(DL: Definition List)<br>
+  -	번호 없는 목록(UL: Unordered List)<br>
+  - 번호 있는 목록(OL: Ordered List)<br>
+		
+  <h2>< dl ></h2>
+  <b>: 정의 목록 태그</b><br>
+	- dt / dd로 이루어져 있다.(실제 내용을 갖는 요소) <br>
+	- dl태그 내에서 dt, dd로 상/하위 목록이 구성된다.<br>
+	<br>
+  <b>< dt >: 정의 목록의 제목</b>Definition Title<br>
+	- 자동 줄바꿈 적용, 들여쓰기는 하지 않음.<br>
+	- 종료 태그는 선택적<br>
+	<br>
+  <b>< dd >:정의 목록의 데이터</b>Definition Data
+	*dt의 하위 태그<br>
+	-자동 줄바꿈 / 들여쓰기 적용됨<br>
+	-종료 태그는 선택적<br>
+	<br><br>
+	<DL><font color=green>< dl ></font> (정의 목록)
+		<dt><font color=green>< dt ></font> 제목 1
+			<dd><font color=green>< dd ></font> 내용 1-1<font color=green>< /dd ></font></dd>
+			<dd><font color=green>< dd ></font> 내용 1-2<font color=green>< /dd ></font></dd>
+		</dt>
+		<dt><font color=green>< dt ></font> 제목 2 <i>종료태그 없음</i>
+			<dd><font color=green>< dd ></font> 내용 2-1<font color=green>< /dd ></font></dd>
+			<dd><font color=green>< dd ></font> 내용 2-2<font color=green>< /dd ></font></dd>	
+	<font color=green>< /dl ></font></dl>
+	<br>
+	>> dd는 하위 목록을 나타내기 때문에, 사용 시 자동으로 탭 적용됨.<br>
+	<br>
+
+	<h2>< ul ></h2>
+	<b>: 번호 없는 목록의 태그</b><br>
+	- ul태그 내에서 li태그로 항목이 구성되고, 그 하위로는 또 ul과 li태그가 필요함.<br>
+	- 종료 태그가 꼭 필요함!<br>
+	<br>
+	<b>< li ></b>list item: 번호없는 목록의 항목<br>
+		- 자동 줄바꿈 / 들여쓰기 적용됨<br>
+		- 종료 태그 선택적 사용<br>
+	<br>
+	<ul><font color=green>< ul ></font> 번호 없는 목록1
+		<li><font color=green>< li ></font> 번호 없는 항목1<font color=green>< /li ></font></li>	
+		<li><font color=green>< li ></font> 번호 없는 항목2<font color=green>< /li ></font></li>
+		<ul><font color=green>< ul ></font>
+			<li><font color=green>< li ></font> 번호 없는 항목2-1<font color=green>< /li ></font></li>
+			<li><font color=green>< li ></font> 번호 없는 항목2-2<font color=green>< /li ></font></li>		 
+		<font color=green>< /ul ></font></ul>	
+		<li><font color=green>< li ></font> 번호 없는 항목3<font color=green>< /li ></font></li>		
+	<font color=green>< /ul ></font>
+	</ul>
+	<br>
+	<b>type="속성값"</b><br>
+	- < ul >, < li >의 속성, <u>항목 앞에 붙는 기호가 달라짐</u> <br>
+	- ul태그에 type이 지정되는 경우, 하위 태그인 li태그에도 적용된다.<br>
+	<br>
+	<li type=disc>: type="disc" 꽉 찬 원
+	<li type="circle">: type="circle" 테두리만 있는 원
+	<li type="square">type="square" : 꽉 찬 네모
+	<br><br>
+	<ul type="square"><font color=green>< ul type="square"></font> 번호 없는 목록1
+		<li><font color=green>< li ></font> 번호 없는 항목1<font color=green>< /li ></font></li>	
+		<li><font color=green>< li ></font> 번호 없는 항목2<font color=green>< /li ></font></li>
+		<ul type="circle"><font color=green>< ul type="circle"></font>
+			<li><font color=green>< li ></font> 번호 없는 항목2-1<font color=green>< /li ></font></li>
+			<li><font color=green>< li ></font> 번호 없는 항목2-2<font color=green>< /li ></font></li>		 
+		<font color=green>< /ul ></font></ul>	
+		<li><font color=green>< li ></font> 번호 없는 항목3<font color=green>< /li ></font></li>
+		<li><font color=green>< li ></font> 번호 없는 항목4<font color=green>< /li ></font></li>
+		<ul type="circle"><font color=green>< ul type="circle"></font>
+			<li><font color=green>< li ></font> 번호 없는 항목4-1<i>종료 태그 없음</i>
+			<li><font color=green>< li ></font> 번호 없는 항목4-2<font color=green>< /li ></font></li>
+			<ul type="disc"><font color=green>< ul type="disc"></font>
+				<li><font color=green>< li ></font> 번호 없는 항목4-1<font color=green>< /li ></font></li>
+			<font color=green>< /ul ></font></ul>
+		<font color=green>< /ul ></font></ul>			
+		<li><font color=green>< li ></font> 번호 없는 항목5<font color=green>< /li ></font></li>			 
+	<font color=green>< /ul ></font>
+	</ul>
+	<br>	
+
+
+	<h2>< ol ></h2>
+	<b>:번호 있는 목록의 태그</b><br>
+	- ol태그 내 li태그로 항목이 구성되고, 그 하위 목록을 위해서는 또 ol 안에 li로 추가해야함<br>
+	- 종료 태그가 꼭 필요!!<br>
+	<br>
+	<b>< li ></b>list item: 목록 항목 태그<br>
+	- 자동 줄바꿈 / 들여쓰기 적용<br>
+	- 종료 태그 선택적 사용<br>
+	<br>
+	<b>type="속성값"</b><br>
+	- ol태그에 type이 지정되는 경우, 하위 태그인 li태그에도 적용<br>
+	- 어떤 식으로 순서를 매길지 정함 >> 숫자 1,2,3,.. / 영어 A,B,C.. / 로마자 i,ii,,..
+	<b>start="값"</b><br>
+	- ol태그의 추가 속성, 어떤 값부터 세기 시작할지 시작값을 설정함<br>
+	<br>
+
+	<ol type="A"><font color=green>< ol type="A"></font> 번호 있는 목록1
+		<li><font color=green>< li ></font> 번호 있는 항목1<font color=green>< /li ></font></li>	
+		<li><font color=green>< li ></font> 번호 있는 항목2<font color=green>< /li ></font></li>
+		<ol type="a"><font color=green>< ol type="a"></font>
+			<li><font color=green>< li ></font> 번호 있는 항목2-1<font color=green>< /li ></font></li>		 
+		<font color=green>< /ol ></font></ol>	
+		<li><font color=green>< li ></font> 번호 있는 항목3<font color=green>< /li ></font></li>
+		<ol type="1" start="0"><font color=green>< ol type="1" start="0"></font>
+			<li><font color=green>< li ></font> 번호 없는 항목3-1<i>종료 태그 없음</i>
+			<li><font color=green>< li ></font> 번호 없는 항목3-2<font color=green>< /li ></font></li>
+			<ol type="i" start="5"><font color=green>< ol type="i" start="5"></font>
+				<li><font color=green>< li ></font> 번호 없는 항목3-2-v<font color=green>< /li ></font></li>
+				<li><font color=green>< li ></font> 번호 없는 항목3-2-vi<font color=green>< /li ></font></li>
+				<li><font color=green>< li ></font> 번호 없는 항목3-2-vii<font color=green>< /li ></font></li>
+			<font color=green>< /ol ></font></ol>
+			<li><font color=green>< li ></font> 번호 있는 항목3-3<font color=green>< /li ></font></li>
+			<li><font color=green>< li ></font> 번호 있는 항목3-4<font color=green>< /li ></font></li>	
+		<font color=green>< /ol ></font></ol>			
+		<li><font color=green>< li ></font> 번호 없는 항목4<font color=green>< /li ></font></li>			 
+	<font color=green>< /ol ></font>
+	</ol>
+	<br>
+
+	
+ <hr width=100%>
+ <pre>
+- "상위 태그안에 하위 태그"의 형태만 유지한다면, ul과 ol을 혼합해서 사용할 수도 있다. 	
+- 각 값이 어떻게 나타나는지, 기본값은 어떤지는 웹문서를 여는 브라우저에 따라 다르다.
+ </pre>
+ </body>
+</html>

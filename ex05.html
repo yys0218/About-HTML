@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+ </head>
+
+ <body>
+ <h1 align=center><a href="D:/YOON/web/00html/ex00.html">About HTML</a></h1>
+ <hr width=100% color=skyblue size=3 align=center>
+	<h2> < font > </h2>
+		:글자의 표현 형태(스타일)를 나타냄 <br>
+		여러 가지 속성/속성값(attribute)을 가짐 <br>
+		명령 요소( < 태그명 > )- element<br>
+		속성( 태그 내 설정 < 태그명 size="3" > )- attribute <br>
+	<p>
+	<strong>< font >에서 사용할 수 있는 속성</strong><br>	
+	: size, color, face,...	<br>
+	*< 태그 > 내에 작성되어야한다!
+	</p>
+		
+		
+		- size="숫자" : 폰트 크기를 지정하는 속성<br>
+		ㄴsize는 1~7사이의 정수, 7이 가장 크고 1이 가장 작음 <br>
+		ㄴ속성은 시작 태그에만 적으면 됨<br>
+		<font size="7"><font color=green>< font size="7" ></font>가장 큰 폰트777<font color=green>< /font ></font></font><br>
+		<font size="6">폰트666</font>
+		<font size="5">폰트555</font>
+		<font size="4">폰트444</font>
+		<font size="3">폰트333</font>
+		<font size="2">폰트222</font>
+		<font size="1">폰트111</font><br>
+		* 줄바꿈 자동 적용 안됨 >> 폰트 크기만 바뀜<br>
+		<br>
+		
+		- color="색이름 또는 색상 번호" : 폰트 색상을 지정하는 속성<br>
+		ㄴ 색상명은 색 이름을 가리키는 영어 단어 red, blue,..	<br>
+		ㄴ 색상 번호는 RGB로 나타내는 값: rrggbb 에 해당하는 16진수(0~9, a~f) <br>
+		*RGB색상표 검색하여 사용! <br>
+		<font color=green>< font color="ff0000" ></font>
+		<font color="ff0000"> ffffff는 모든 색이 진함 >> 검정색</font>
+		<font color=green>< /font ></font><br>
+		<font color=green>< font color="purple" ></font>
+		<font color="purple"> 000000는 모든 색이 없음 >> 흰색 </font>
+		<font color=green>< /font ></font><br>
+		<br>
+		
+		- face=폰트 모양을 지정하는 속성<br>
+		ㄴ글꼴을 지정 *글꼴표(font face)참조!<br>
+		<font color=green>< font face="궁서" ></font>
+		<font face="궁서">궁서체</font>
+		<font color=green>< /font ></font><br>
+		<font color=green>< font face="바탕체" ></font>
+		<font face="바탕">바탕체</font>
+		<font color=green>< /font ></font><br>
+		<font color=green>< font face="Comic Sans MS" ></font>
+		<font face="Comic Sans MS">Comic Sans MS</font>
+		<font color=green>< /font ></font><br>
+		<font color=green>< font face="Impact" ></font>
+		<font face="Impact">Impact</font>
+		<font color=green>< /font ></font><br>
+		<br>
+		
+		<strong>속성의 조합: 한 번에 여러 속성을 적용하려면 띄어쓰기로 구분해 나열하면 됨</strong><br>
+		<font color=green>< font face="바탕체" size="2" color="fusia"></font>
+		<font size="2" face="바탕체" color="fusia"><br>
+		속성의 값은 "(큰 따옴표)로 묶어주는 것이 원칙이나, <br>
+		값에 띄어쓰기가 포함되지 않는다면 생략도 가능</font><br>
+		<font color=green>< /font ></font><br>
+		<font color=green>< font size="-1" face="고딕" color="yellowgreen"></font>
+		<font size="-1" face="고딕" color="yellowgreen">
+		속성의 순서는 상관 없음. 속성=값 만 잘 짝지어지면 됨.</font>
+		<font color=green>< /font ></font><br>
+		<br>
+<hr width=100%>
+<pre>
+< 시작 태그 >
+작성해야할 내용이 많으면 종료태그를 줄바꿔 내린 다음
+그 사이에 탭하여 내용을 적으면 됨.
+어쨌든 내용이 태그로 감싸지기만 하면 됨.
+< /종료 태그 >
+</pre>
+ </body>
+</html>

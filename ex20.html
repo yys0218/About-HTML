@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+</head>
+
+ <body>
+ <h1 align=center><a href="">About HTML</a></h1>
+ <hr width=100% color=skyblue size=3 align=center>
+	<h2>< form ></h2>
+	- HTML 문서에서 데이터를 주고 받을 때 사용하는 태그<br>
+	- 데이터를 입력받을 수 있는 태그(요소)를 하위 요소로 가짐<br>
+	< form > <br>
+	&nbsp;&nbsp;< 내부태그 <i>속성="값"</i> >< /내부 태그 ><br>
+	< /form ><br>
+	- 요소(element)들은 속성의 이름(name)=값(value)이 짝을 이룸<br>
+	<p>
+	< form ><br>
+	&nbsp;&nbsp;< input type="text" <b>name="st_name" value="홍길동"</b>... ><br>
+	&nbsp;&nbsp;< button <b>name="fruit" value="apple"</b> ... >사과< /button ><br>
+	< /form ><br>
+	</p>
+	* 요소의 이름은 자바로 치면, 변수명인 셈 >> 각 요소마다 달라야함.<br>
+	* 값이 주어진 요소를 '파라미터'라고 함.<br>
+	<br>
+	<b>form태그의 속성</b><br>
+	method="get|post": 폼 데이터가 서버로 제출될 때 사용되는 HTTP메소드를 지정<br>
+	action="URL": 폼 데이터를 서버로 보낼 때 데이터가 도착할 URL명시<br>
+	<br>
+	<h3>form태그의 하위 요소</h3>
+	<b>< input ></b><br>
+	:사용자로부터 입력을 받을 수 있는 입력 필드가 생성됨<br>
+	- 텍스트나 이미지와 같은 콘텐츠를 삽입할 수 없음<br>
+	- <b>싱글 태그</b><br>
+	<br>
+	input 태그의 속성 - 이름과 값<br>
+	name="이름" : input태그의 이름<br>
+	value="값" : input태그에 부여된 초기값<br>
+	<br>
+	<b>input 태그의 속성 - type= ~</b><br>
+	="text" : 단순 텍스트를 입력받음<br>
+	ㄴ size="글자수" : 텍스트 입력창의 크기(한 번에 보여지는 글자수)<br>
+	ㄴ maxlength="최대글자수" : 입력가능한 최대 글자 수를 지정<br>
+	ㄴ placeholder="텍스트" : 입력창에 짧은 도움말을 명시함, 입력이 시작되면 사라짐<br>
+	<br>
+	="password" : 입력되는 값이 가려져서 보임<br>
+	="checkbox" : 같은 < form >내에서 중복 선택이 가능한 체크박스를 생성, 선택시 value의 값이 서버로 제출됨<br>
+	="radio" : 같은 < form >내에서 중복 선택이 불가한 선택항목을 생성, 선택시 value의 값이 서버로 제출됨<br>
+	<i>선택항목들의 name은 같고, value는 모두 달라야 함!</i><br>
+	<br>
+	="button" : value의 값(텍스트)를 가진 버튼 생성<br>
+	="img" : 이미지를 통해 이벤트를 작동시킴<br>
+	="hidden" : 이 속성이 사용된 태그는 브라우저에서 보이지 않음<br>
+	<br>
+	<!--사용 예 설명 위한 태그 가시화-->
+	<span class="tag"><xmp><form><input type="radio" name="loginType" value="teacher"></xmp></span>
+	<span><font color="black">교직원</font></span>
+	<span class="tag"><xmp><input type="radio" name="loginType" value="student"></form><br></xmp></span>
+	<span><font color="black">학생&nbsp;&nbsp;</font></span><br>
+	<span>
+		<form>
+		<input type="radio" name="loginType" value="teacher">교직원
+		<input type="radio" name="loginType" value="student">학생
+		</form>
+	</span>
+	<br>
+	<span><font color="black">ID</font></span>
+	<span class="tag"><xmp><form><input type="text" name="id" size="10" placeholder="영숫자만 입력"></xmp></span>
+	<span><form>&nbsp;ID <input type="text" name="id" size="10" placeholder="영숫자만 입력"><br></form></span>
+	<br>
+	<span><font color="black">PW</font></span>
+	<span class="tag"><xmp><input type="password" name="pw" size="10" maxlength="12"></xmp></span>
+	<span><form>&nbsp;PW <input type="password" name="pw" size="10" maxlength="12"><br></form></span>
+	<span class="tag"><xmp><input type="button" name="login" value="로그인"></form><br></xmp></span>&nbsp;
+	<span><form><input type="button" name="login" value="로그인"><br></form></span>
+	<br>
+	<span class="tag"><xmp><form></xmp></span><span><font color="black">희망 교과목을 모두 선택하세요</font></span><br>
+	<span class="tag"><xmp><input type="checkbox" name="subject" value="korean"></xmp></span><span><font color="black">국어</font></span><br>
+	<span class="tag"><xmp><input type="checkbox" name="subject" value="math"></xmp></span><span><font color="black">수학</font></span><br>
+	<span class="tag"><xmp><input type="checkbox" name="subject" value="english"></xmp></span><span><font color="black">영어</font></span><br>
+	<span class="tag"><xmp></form></xmp></span>
+	<form>희망 교과목을 모두 선택하세요<br>
+		<input type="checkbox" name="subject" value="korean">국어
+		<input type="checkbox" name="subject" value="math">수학
+		<input type="checkbox" name="subject" value="english">영어
+	</form>
+	<span class="tag"><xmp><form><input type="image" name="img" src="https://yys0218.github.io/file-back-up/고양이.jpg" width="200px" onclick="alert('야옹~')"></form></xmp></span>
+	<br>고양이 클릭!	
+	<form><input type="image" name="img" src="https://yys0218.github.io/file-back-up/고양이.jpg" width="200px" onclick="alert('야옹~')"></form>
+	<span class="tag"><xmp><form><input type="hidden" name="hid" value="브라우저에서 보이지 않는 값"></form></xmp></span>
+	<form><input type="hidden" name="hid" value="브라우저에서 보이지 않는 값"></form>
+	<p>
+	
+<hr width=100%>
+<pre>
+</pre>
+ </body>
+</html>
