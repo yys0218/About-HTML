@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <link rel="stylesheet" href="../01css/css/style.css">
+  <style>
+    h3 { padding:10px; background-color:skyblue; color:#fff; }
+  </style>
+</head>
+
+ <body>
+ <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+ <hr width=100% color=skyblue size=3 align=center>
+  <h2>인라인 스타일</h2>
+  : 태그 내에 직접 style 속성을 사용<br>
+  - 해당 태그에만 스타일을 적용<br>
+	< p<span class="tag">&nbsp;style="color:blue"&nbsp;</span>>
+  <p style="color:blue"> 이 태그에만 파랑색 글씨 적용</p>
+  < /p ><br>
+
+  <h2>내부 스타일 시트</h2>
+  Internal StyleSheets<br>
+  :문서(html)에 사용할 스타일을 같은 문서 내에 정의하는 방식<br>
+  - 이 때의 모든 스타일 정보는 < head >< /head > 태그 안의<br>
+	  < style > < /style > 태그 안에서 작성되어야함<br>
+    <xmp><head></xmp>
+    <xmp><style></xmp>
+    <span class="tag">  
+    h3 { <br>
+    &nbsp;&nbsp;&nbsp;padding:10px; <br>
+    &nbsp;&nbsp;&nbsp;background-color:skyblue; <br>
+    &nbsp;&nbsp;&nbsp;color:#fff; <br>
+    } <br>
+    </span>
+    <xmp></style></xmp>
+    <xmp></head></xmp>
+    <h3>내부 스타일 시트가 적용된 h3태그</h3>
+
+    <h2>외부 스타일 시트</h2>
+    External StyleSheet<br>
+    :일관성 있는 스타일을 사용하기 위해 css코드를 별도 파일로 저장, 필요할 때 가져오는 방식<br>    
+    - 별도 파일은 .css 확장자로 저장됨<br>
+    ㄴ 별도 파일 내에서는 < style >내 작성할 필요X<br>
+    <xmp> style.css 생성</xmp>
+    <span class="tag">
+    h4{ <br>
+      &nbsp;&nbsp;&nbsp;padding: 10px; <br>
+      &nbsp;&nbsp;&nbsp;background-color:greenyellow; <br>
+      &nbsp;&nbsp;&nbsp;color:magenta; <br>
+    } <br>
+    </span><br>
+    - 외부 스타일 시트를 연결하는 싱글태그< link >는 < head > 내에 존재해야함 <br>
+    <xmp><head></xmp>
+    <xmp><style></xmp>
+    <span class="tag">  
+    < link rel="stylesheet" href="외부 스타일 시트의 파일 경로" > <br>
+    </span>
+    <xmp></style></xmp>
+    <xmp></head></xmp>
+    * <i>rel=stylesheet</i>는 고정값<br> 
+    <h4>외부 스타일 시트가 적용된 h4태그</h4>
+    <br>
+  <hr width=100%>
+<pre>
+src : 이미지, 스크립트, iframe 등 외부 리소스 삽입용 - 브라우저는 src리소스를 즉시 다운/처리함
+    < img src="image의 주소" > < script src="script.js" >
+
+href : 하이퍼링크 또는 스타일 시트의 경로 지정 - 브라우저는 href를 즉시 다운하지 않고, 필요할 때 접근할 수 있도록 처리함
+      < a href="https://example.com" >  < link href="style.css" rel="stylesheet" >
+
+</pre>
+</body>
+</html>

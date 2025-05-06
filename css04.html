@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+ <title>About HTML</title>
+ <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+ <style>
+   * { 
+     margin-left:50px;
+   }
+
+  h3 { 
+    font-style:italic;
+    color:#5678ff;
+  }
+</style>
+</head>
+ <body>
+   <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+   <hr width=100% color=skyblue size=3 align=center> 
+  <h2>전체 선택자</h2> 
+  <div>
+  Universal Selector<br>
+  :문서의 모든 요소에 스타일을 적용함<br>
+  - 태그에 들어있지 않은 것들에는 적용되지 않음
+  </div>
+  <p>
+  전체 선택자는 *(별)을 사용<br>
+  <span class="tag">*</span> { margin-left:50px; } <br>
+  </p>
+  <h2>타입 선택자</h2>
+  <div>
+  Type Seletor<br>
+  : 특정 태그를 사용하는 모든 요소*에 스타일을 적용<br>
+  - 모든 요소(태그)를 선택자로 사용할 수 있다.<br>
+  - 인라인 스타일로는 사용 불가!<br>
+  </div>
+  <br>
+  <div>
+    <font color="green">h3</font> { font-style:italic; color:#5678ff; } <br>
+  </div>
+  <h3>h3태그를 사용하는 모든 요소에 적용됨</h3>
+  <h3>h3요소를 사용하는 모든 태그에 적용됨</h3>
+  <h3>< h3 > 인 모든 요소에 적용됨</h3>
+  <hr width=100%>
+  <pre>
+    *
+    태그 = 요소(element)
+    태그(요소)가 가지는 속성(attribute)
+  </pre>
+ </body>
+</html>

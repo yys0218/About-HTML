@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+    .keyword{ color:red; }
+    .hexa{ color: #0000ff; }
+    .decimal{ color:rgb(255,200,30) }
+    .percentage{ color:rgb(0%,100%,0%) }
+</style>
+</head>
+
+ <body>
+ <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+ <hr width=100% color=skyblue size=3 align=center>
+ <body>
+  <h2>css의 색상 적용</h2>
+  <b>색상명</b><br>
+  .keyword { color: <span class="tag"> red</span>  ; }<br>
+  <span class="keyword">keyword클래스 선택자의 색상은 red</span><br>
+  <br>
+  <b>16진수 표현법</b><br>
+  - #을 붙여 16진수 표현법이라는 걸 브라우저에게 알림<br>
+  - rrggbb 순으로 각 자리에 0~f의 숫자를 입력<br>
+  <p>
+  .hexa { color:<span class="tag">#0000ff</span>; }<br>
+  <span class="hexa">hexa클래스 선택자의 색상은 #0000ff</span><br>
+  </p>
+
+  <b>10진수 표현법</b><br>
+  - rgb(r의 정도, g의 정도, b의 정도)<br>
+  - 각 자리에 0~255의 수<br>
+  <p>
+  .decimal { color:<span class="tag">rgb(255,200,30)</span> }<br>
+  <span class="decimal">decimal클래스 선택자의 색상은 rgb(255,200,30)</span><br>
+  </p>
+
+  <b>백분율</b><br>
+  - rgb(r의 정도, g의 정도, b의 정도)<br>
+  - 각 자리에 백분율<br>
+  <p>
+  .percentage{ color:<span class="tag">rgb(0%,100%,0%)</span> }<br>
+  <span class="percentage">percentage클래스 선택자의 색상은 rgb(0%,100%,0%)</span>
+  </p>
+  <br>
+  <hr width=100%>
+<pre>
+* 속성(스타일규칙) 지정시 : 과 =""의 차이
+
+  - 기본적으로, 스타일 규칙은 속성:속성값;
+  p { color:blue; }
+
+  - 인라인 스타일로 태그 내 style의 값으로 속성 지정시 style="스타일 규칙"
+  < p style="color:blue" >
+  < font color="blue">
+</pre>
+</body>
+</html>
