@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="kr">
+  <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+	h2[title] { background-color:#ccffff; } /*태그[속성]: [속성]을 가지는 태그에 스타일을 적용시킴*/
+	
+	div p { /*상위 태그 하위 태그 : 공백으로 구분 >> div의 하위 태그인 p*/
+		color:purple;
+		font-family:"고딕",gungseo,serif; 
+		/*font-family: 글꼴을 여러 개, 앞에서부터 순서대로 지정해서 "궁서"적용 안되면 gungseo해라~ 식으로 사용*/
+	}
+	
+	.parent > span { /*.parent의 > 자식인 span*/
+		border:3px double blue;
+		padding:10px;
+		font-size:12px;
+	}
+  </style>
+ </head>
+
+<body>
+  <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+  <hr width=100% color=skyblue size=3 align=center>
+  <h2>속성 선택자</h2>
+  : 특정 속성을 가진 요소를 선택해 스타일을 적용<br>
+  <br>
+  <b>속성 선택자 사용</b><br>
+  <span class="tag">태그명[ 속성 ]</span> { 스타일 규칙 } <br>
+  >>태그명은 생략시 <u>[속성]을 가지는 모든 요소에 적용</u>됨.<br>
+  <br>
+  <span class="tag">h2 [ title ]</span>{ background-color:ccffff; }<br>
+  <br>
+  <b>속성 선택자 적용</b><br>
+  < h2 &nbsp;&nbsp;<span class="tag">title="test"</span> ><span><h2 title="test">title속성을 가진 h2태그</h2></span>< /h2 ><br>
+  < h2 &nbsp;&nbsp;<span class="tag">title="test2"</span> ><span><h2 title="test2">title값이 다른 < h2 >에도 적용됨</h2></span>< /h2 ><br>
+  < p &nbsp;&nbsp;<span class="tag">title="test3"</span> ><span><p title="test3">h2의 title 선택자이므로, title을 가진 p태그에는 적용 안됨</p></span>< /p ><br>
+  <br>
+
+  <h2>하위 선택자</h2>
+  Desendant Selector<br>
+  : 특정 선택자 안에 포함된 <u>하위 요소들을 선택</u>하여 스타일 적용 가능<br>
+  <br>
+  <b>하위 선택자 사용</b><br>
+  <span class="tag">상위태그 하위태그</span> { 스타일 규칙; }<br>
+  ㄴ> 공백으로 구분하여 나열<br>
+  <br>
+  <span class="tag">div p</span>{ <br>
+	&nbsp;&nbsp;&nbsp;color:purple;<br>
+	&nbsp;&nbsp;&nbsp;font-family:"고딕",gungseo,serif;<br>
+  	}<br>
+  	<br>
+   <b>하위 선택자 적용</b><br>
+   <span class="tag">
+	< div ><br>
+	< p ><br>
+	</span>
+	<div>
+		<p>< div >의 하위 태그인 < p >에 스타일 적용됨</p>
+	</div>
+	<span class="tag">< /p ></span><br>
+	<span class="tag">< /div ></span>
+	<br><br>
+	<h2>자식 선택자</h2>
+	Child Selector<br>
+	:부모 요소 내에 (직속)포함된 <u>자식 요소를 선택</u>해 스타일을 적용<br>
+	- 자식 요소: 상위 태그(부모 요소)의 바로 하위에 존재하는 내부 태그<br>
+	ㄴ두 번째 하위에 존재하게 되는 태그(후손/하위/손자..)는 자식 요소가 아님<br>
+	*하위 선택자와 헷갈리니 주의!<br>
+	<br>
+	<b>자식 선택자 사용</b><br>
+	<span class="tag">부모태그 > 자식태그</span> { 스타일 규칙; }<br>
+	ㄴ > 로 구분<br>
+	<span class="tag">.parent > span </span>{ <br>
+		&nbsp;&nbsp;&nbsp;border:3px double blue;<br>
+		&nbsp;&nbsp;&nbsp;padding:10px;<br>
+		&nbsp;&nbsp;&nbsp;font-size:12px;<br>
+	}<br>
+	<br>
+	<b>자식 선택자 적용</b><br>
+	<span class="tag">< div class="parent" ></span><br>
+	<span class="tag">< span ></span><i>&nbsp;&nbsp;<= .parent의 하위 태그</i><br>
+	<div class="parent">
+		<span>parent클래스인 div의 직속 자식인 p태그</span><br>
+		<div>
+			<span class="tag">< /span ></span>< br ><br>
+			<span class="tag">&nbsp;&nbsp;&nbsp;< div ></span><br>
+			<span class="tag">&nbsp;&nbsp;&nbsp;< span ></span>
+			<span>&nbsp;&nbsp;&nbsp;.parent인 div태그의 하위의 하위 태그인 p태그</span>
+			<span class="tag">&nbsp;&nbsp;&nbsp;< /span ></span><i>&nbsp;&nbsp;<= .parent의 직속 자식이 아닌 손자!</i><br>
+			<span class="tag">&nbsp;&nbsp;&nbsp;< /div ></span>< br ><br>
+		</div><!--자식이 아닌 후손(하위)div 태그 닫기-->
+	</div><!--부모 div 태그 닫기--><br>
+	<span class="tag">< /div ></span><br>
+	<br>
+  <hr width=100%>
+
+ </body>
+</html>
