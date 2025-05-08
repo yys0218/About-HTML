@@ -6,14 +6,16 @@
   <style>
 	ul.list { margin:20px }
 	div { 
-		vertical-align:top; 
+		margin: 20px 0;
+		vertical-align:top; /*div들을 위쪽으로 수직 정렬*/
 		border:1px dotted #ccc;
 		border-radius:20px;
+		text-align:left; /*div의 텍스트들을 왼쪽 정렬*/
 	}
   </style>
  </head>
 
- <body>
+ <body style="text-align:center;"><!--body의 모든 text를 가운데 정렬함(inline블록으로 되어있는 div들을 가운데 정렬함함)-->
  <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
  <hr width=100% color=skyblue size=3 align=center>
  <div>
@@ -51,7 +53,7 @@
 	</ul>
   </ul>
 </div>
-<!--페이지에 반응해 움직이게 만들기 & 목록들 센터로 &테두리..-->
+<!--페이지에 반응해 움직이게 만들기--->
 <div>
 	<ul class="list">
 		<h2>CSS</h2>
@@ -71,15 +73,13 @@
 	   </ul>
 		<li>적용</li>
 		<ul>	
-			<li><a href="ex20.html">캐스케이딩(단계적 적용)</a></li>
-			<li><a href="ex21.html">우선순위</li>
-			<li><a href="ex22.html">상속 / px와 em</li>
+			<li><a href="css09.html">우선순위(Cascading)</a></li>
+			<li><a href="css10.html">상속 / px와 em</li>
 		</ul>
-		<li>가상 요소</li>
+		<li>가상 선택자</li>
 	   	<ul>
-		   <li><a href="ex09.html"> first-line first-letter 가상 요소</a></li>
-		   <li><a href="ex10.html"> before/after 가상 요소</a></li>
-		   <li><a href="ex10.html"> first-child 가상 클래스</a></li>
+		   <li><a href="css11.html"> 가상요소 - before/ after/ first-line/ first-letter</a></li>
+		   <li><a href="css12.html"> 가상클래스 - hover/focus/active/first-child</a></li>
 	   </ul>
 	 </ul>
 </div>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+	h3 + h4 { /*형 요소 + 에 근접한 동생 요소*/
+		color: blue;
+		background-color:yellow;
+	}
+
+  h4 ~ h5 { /*형 요소 ~ 동생요소(인접한 동생만이 아니라 모든.)*/
+		color:yellow;		
+		background-color:blue;
+	}
+  </style>
+ </head>
+ 
+ <body>
+  <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+  <hr width=100% color=skyblue size=3 align=center>
+  <h2>형제 선택자</h2>
+  : 같은 부모를 가진 요소들 간의 관계에서,<br>
+  먼저 나오는 요소를 형 요소, 그 다음에 오는 요소를 동생요소 라고 함.<br>
+  <p>
+  < 부모 요소 ><br>
+  <span class="tag">&nbsp;&nbsp;&nbsp;< 자식 요소1 ></span>&nbsp;<= 형 요소<br>
+  <span class="tag">&nbsp;&nbsp;&nbsp;< 자식 요소2 ></span>&nbsp;<= 동생 요소<br>
+  < /부모 요소 ><br>
+  < 부모 요소의 형제 요소 ><br>
+  </p>
+  *모든 태그는 body태그 내에 작성되므로, <i>같은 들여쓰기 단계</i>에 있는 태그는 <i>형제</i>라고 볼 수 있음!
+  <br>
+  <h2>인접 형제 선택자</h2>
+  : 형 요소에 인접한(바로 다음에 오는) 동생 요소에게 스타일을 적용<br>
+  <br>
+  <b>인접 형제 선택자 사용</b><br>
+  <span class="tag">형 요소 + 동생 요소</span> { 스타일 규칙 }<br>
+  ㄴ> +로 구분
+  <span class="tag">h3 + h4</span>{ <br>
+  &nbsp;&nbsp; color: blue;<br>
+  &nbsp;&nbsp; background-color: yellow;<br>
+  }<br>
+  <br>
+  <b>인접 형제 선택자 적용</b><br>  
+  <span class="tag">< h3 ></span><span><h3>형 요소</h3></span><span class="tag">< /h3 ></span><br>
+  <span class="tag">< h4 ></span><span><h3></h3><h4>형 요소에 인접한 동생 요소</h4></span><span class="tag">< /h4 ></span><br>
+  <span class="tag">< h4 ></span><span><h4>형 요소에 인접하지않은 동생 요소</h4></span><span class="tag">< /h4 ></span>&nbsp;<= *같은 태그(h4)라도 형 요소 (h3)와 붙어 있지 않으면 스타일 적용X<br>
+
+  <h2>일반 형제 선택자</h2>
+  : 형 요소 다음에 오는 모든 동생 요소에 스타일 적용<br>
+  <br>
+  <b>일반 형제 선택자 사용</b><br>
+  <span class="tag">형 요소 ~ 동생 요소</span> { 스타일 규칙 }<br>
+  ㄴ> ~로 구분
+  <span class="tag">h4 ~ h5</span>{ <br>
+  &nbsp;&nbsp; color: yellow;<br>
+  &nbsp;&nbsp; background-color: blue;<br>
+  }<br>
+  <br>
+  <b>일반 형제 선택자 적용</b><br>
+  <span class="tag">< h4 ></span><span><h4>형 요소</h4></span><span class="tag">< /h4 ></span><br>
+  <span class="tag">< h5 ></span><span><h4></h4><h5>인접한 동생 요소</h5></span><span class="tag">< /h5 ></span><br>
+  <span class="tag">< h5 ></span><span><h4></h4><h5>인접하지 않은 동생 요소</h5></span><span class="tag">< /h5 ></span>&nbsp;<= *인접 형제 선택자와는 달리 <u>모든 동생 요소</u>에 스타일 적용<br>
+  <hr width=100%>
+ </body>
+</html>

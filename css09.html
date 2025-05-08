@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+	h3 { color:brown !important; } /*!important는 어떤 스타일보다 우선 적용됨*/
+
+	h4 { color:yellow; }
+	h4 { color:red; }  /*타입 선택자1과 같은 타입(선택자), 같은 속성 >> 마지막 스타일이 적용됨*/
+	#cas { color:blue; }
+	.cade { color:green; }
+ 
+ </style>
+ </head>
+ <body>
+	<h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+	<hr width=100% color=skyblue size=3 align=center>
+	<h2>CSS의 스타일 적용법</h2> 
+	CSS Cascading StyleSheets<br>
+	:<b>Casdading</b> - 계단식, 우선순위가 계층적으로 적용되는 스타일 시트<br>
+	<p>
+	1) 스타일 우선 순위에 따라 적용: 스타일 규칙의 중요도, 적용 범위에 따라 우선순위 결정<br>
+	2) 스타일 상속에 의해 적용: 부모 요소의 스타일을 자식 요소에게 전달<br>
+	</p>
+
+	<b>스타일 우선 순위</b><br>
+	- 우선 순위는 위에서 아래로, 같은 태그 선택자라도 우선순위가 높은 스타일부터 점차 아래로 계단식 적용됨<br>
+	- 스타일 적용 범위가 좁을수록 우선 순위가 높음<br>
+	<p>!important: 가장 높은 우선순위 - 직접 지정한 곳에만 적용<br>
+		h3 { color:brown; <span class="tag">!important</span>; }<br>
+		<span class="tag">< h3 style="color:blue;" ></span><h3 style="color:blue;">!important - 인라인 스타일보다도 우선적용</h3><span class="tag">< /h3 ></span>
+	</p>
+	<hr width="100px" align="left">
+	
+	<p>인라인 스타일: 태그 안에 style속성으로 지정한 스타일 - 해당 태그에만 적용<br>
+		< h4&nbsp;<span class="tag">style="color:orange;</span>&nbsp;><h4 style="color:orange;">인라인 스타일 적용</h4><span class="tag">< /h4 ></span>
+	</p>
+	<hr width="100px" align="left">
+	
+	<p>id 스타일: #아이디 선택자에 지정한 스타일 - 같은 아이디를 가진 태그만 적용<br>
+		ㄴ하나의 아이디는 한 번만 사용될 수 있다. *아이디-태그 1:1<br>
+		<span class="tag">#cas</span>{ color:blue; }<br>
+		< h4 <span class="tag">id="cas"</span>><h4 id="cas">id 스타일 적용</h4>< /h4 ><br>
+	</p>
+	<hr width="100px" align="left">
+	
+	<p>class 스타일: .클래스 선택자에 지정한 스타일 - 같은 클래스를 가진 태그에 적용<br>
+		ㄴ하나의 클래스는 여러 번 사용될 수 있다. *클래스-태그 1:다수 가능<br>
+		<span class="tag">.cade</span>{ color:green; }<br>
+		< h4&nbsp;<span class="tag">class="cade"</span>&nbsp;><h4 class="cade">클래스 스타일 적용</h4>< /h4 >
+	</p>
+	<hr width="100px" align="left">
+	<p>타입(요소/태그) 스타일: 태그 선택자에 지정한 스타일 - 같은 태그를 가지면 모두 적용</p>
+	<span class="tag">h4&nbsp;</span>{ color:yellow; }<br>
+	<span class="tag">h4&nbsp;</span>{ color:red; }&nbsp;<= 같은 선택자-같은 속성인 스타일 규칙이 여러 개라면 <u>제일 마지막에 정의한 스타일</u>이 적용됨<br> 
+	<span>< h4 ></span><span><h4>h4 요소 1</h4></span><span>< /h4 ></span><br>
+	<span>< h4 ></span><span><h4>h4 요소 2</h4></span><span>< /h4 ></span><br>
+
+	<br><br>
+	<hr width=100%>
+</body>
+</html>

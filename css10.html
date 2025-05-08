@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+	div {
+		border: 1px solid red;
+		padding:2em; /*부모의 padding값의 2배*/
+	}
+	
+	p {
+		font-size: 1.5em; /*1em(부모의 속성값의) * 1.5(배) */
+	}
+
+  </style>
+ </head>
+ <body>
+	<h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+	<hr width=100% color=skyblue size=3 align=center>
+  <h2>스타일의 상속</h2>
+	: 부모 요소(상위 태그)에 적용한 스타일이 자식 요소(하위 태그)에 적용되는 것<br>
+	- 하위 요소에 상속되지 않는 속성도 있다.<br>
+	>> <b>배경색, 배경이미지, border, margin, padding, float, positon</b>은 상속되지 않는다.<br>
+	<br>
+	<b>상속을 활용한 크기 지정</b><br>
+	<b>em</b><br>
+	:부모의 값을 기준으로 해, 상대적으로 변하는 단위<br>
+	<span class="tag">n em</span> = 부모의 속성값의 <span class="tag">n 배</span><br>
+	- 상속이 가능하며, em으로 글자 크기를 지정한 경우, 상대적으로 작거나 크게 나올 수 있다.<br>
+ 	<br>
+	div { <br>
+	&nbsp;&nbsp; border:1px solid red;<br>
+	&nbsp;&nbsp; padding:  <span class="tag">2em;</span><br>
+	}<br>
+	p { <br>
+		&nbsp;&nbsp; font-size: <span class="tag">1.5em;</span><br>
+	}<br>
+	<br>
+	<b>em의 적용</b><br>
+	<span class="tag">< div ></span>&nbsp;<= *body의 padding의 <span class="tag">2배</span><br>
+	<span class="tag">< p ></span>&nbsp;<= *div의 폰트 사이즈의 <span class="tag">1.5배</span><br>
+	<div>
+		<p>부모요소인 div의 폰트사이즈의 1.5배<br>
+		padding값 2배</p><br> <!-- div의 폰트사이즈의 1.5배 -->
+	</div><br>
+	<span class="tag">< /p ><br>
+	< /div ></span><br>
+	<br>
+	<hr width=100%>
+<pre>
+ * px과 em의 차이점
+	- px 단위 적용: body 요소(부모 요소)의 크기를 무시하고 직접 지정한 px로 재설정
+	- em 단위 적용: body 요소(부모 요소)의 크기를 기준으로 상대적으로 크기를 설정
+</pre>
+ </body>
+</html>
