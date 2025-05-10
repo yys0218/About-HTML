@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+  </style>
+ </head>
+
+ <body>
+ <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+ <hr width=100% color=skyblue size=3 align=center>
+  <b>자바 스크립트 작성방법1</b>
+  <h2>문서 내부에 작성</h2>
+  - 웹 문서 안에 <b>< script > 자바 스크립트 소스코드 < /script > </b> 사용<br>
+  - < script > 는 웹문서 내 어디든 위치할 수 있지만.. >><b>관례적으로 < /body >바로 위에 작성</b><br>
+	ㄴ 삽입된 위치 그 자리에서 스크립트가 실행됨<br>
+  - < script > 는 하나의 문서에 여러 개 사용 가능<br>
+
+  <span class="tag">< h2 id="head"></span><span><h2 id="head">자바스크립트</h2></span><span class="tag">< /h2 ></span>
+  <p id="text">위의 텍스트를 클릭하세요</p>
+  <span class="tag">< script ></span>
+    <xmp> /* id가 head인 선택자를 누르면 색이 바뀌도록 함 */
+    var heading = document.querySelector('#head');
+    heading.onclick = function(){
+      heading.style.color = "orange";
+    }</xmp>
+  <span class="tag">< /script ></span>
+
+
+  <!--관례적으로 /body위
+  document:문서 내에
+  .querySelector(선택자이름): ( )안의 선택자를 사용하겠다. ()내 "" '' ``사용 가능
+  
+  function = 자바에서의 메서드와 같은 역할, 항상 function이라고 써서 사용-->
+  <script>/*주석 사용*/
+	  var heading = document.querySelector('#head');
+	  heading.onclick = function(){
+		  heading.style.color="orange";
+  	}
+  </script>
+  <hr width=100%> 
+ </body>
+</html>

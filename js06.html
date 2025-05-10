@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+  </style>
+ </head>
+
+ <body>
+  <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+  <hr width=100% color=skyblue size=3 align=center>
+  <h2>웹 브라우저 콘솔창에 출력</h2>
+  <p>console.log( 내용 );</p>
+  : ()안의 내용을 콘솔창에 표시 <br>
+  - 소스코드의 오류, 변수 값 확인 등의 용도 <br>
+  - ()안에 변수 사용 가능, ""/''를 사용하여 텍스트 넣기도 가능 >><b>html태그 사용 불가</b><br>
+  <p>
+  *<i>웹 브라우저에서 콘솔창 확인</i><br>
+  ㄴ 개발자 도구: F12<br>
+  ㄴ 콘솔창 바로보기: ctrl+shift+j<br>
+  </p>
+  <xmp>< script ></xmp>
+  <span class="tag"> console.log("</span>콘솔창에 출력됩니다.<span class="tag">\n</span> html태그는 사용 불가<span class="tag">");</span><br>
+  <xmp></script></xmp>
+
+  <br><hr width="150px" align="left"><br>
+
+  <b>console.log()활용</b><br>
+  -prompt()로 데이터 입력 받기 <br>
+  >> 변수에 대입<br>
+  >> console.log()내에서 변수 사용<br>
+  <p>< button type="button" id="consolelog">
+  <button type="" id="consolelog">이름 입력</button>
+  < /button ></p>
+  <xmp>< script >
+    document.querySelector('#consolelog').onclick = function(){ </xmp>
+      <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;let <b>name</b> = prompt("이름을 입력하세요.\n 콘솔창(ctrl+shift+j)에서 결과를 확인하세요."); </span> <br>
+    <xmp>  if(name===null || name==""){
+        alert("다시 입력해주세요.");
+       } else { </xmp>
+      <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;console.log(<b>name</b>+"님 안녕하세요.");</span>
+    <xmp>  }
+}
+    </script></xmp>
+
+    <br><hr width="150px" align="left"><br>
+
+    <b>콘솔창에서 오류 확인하기</b><br>
+    - 자바스크립트 코드에 오류가 발생할 경우, 콘솔창에서 오류가 발생한 부분을 확인할 수 있다.<br>
+    <xmp>콘솔창 확인(ctrl+shift+j)
+
+        Uncaught TypeError: document.writ is not a function at js06.html:69:11
+    </xmp>
+    <p>>> js06.html의 69번째 줄에서 오류가 발생했음을 나타냄.</p>
+
+  <hr width=100%> 
+  <script>
+    //콘솔창에 출력
+    console.log("콘솔창에 출력됩니다.\n html태그는 사용 불가.");
+
+    //값입력받고 사용하기
+    document.querySelector('#consolelog').onclick = function(){
+        let name = prompt("이름을 입력하세요.\n 콘솔창(ctrl+shift+j)에서 결과를 확인하세요.");
+        if(name===null || name==""){
+            alert("다시 입력하세요.");
+        } else {
+            console.log(name+"님, 안녕하세요.");
+        }
+    }
+    //일부러 오류내고 콘솔창에서 오류 확인하기
+    var now=new Date(); //객체 생성
+	var time=now.toLocaleTimeString();
+	document.writ("<h3>현재 시간은: "+time+"</h3>"); //오류 발생 부분 
+  </script>
+ </body>
+</html>

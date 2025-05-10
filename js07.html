@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+  </style>
+ </head>
+
+ <body>
+  <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+  <hr width=100% color=skyblue size=3 align=center>
+  <h2>변수(variable)</h2>
+	<p>
+ 	 : 하나의 값만 저장하며, 그 값은 달라질 수 있음<br>
+	< - > 상수 constant : 값을 한 번 지정하면 바뀌지 않는 데이터<br>
+	</p>
+	<b>변수 선언</b><br>
+	- 사용이 유추 가능하게 이름짓기.<br>
+	- 한 번 대입 후, 다른 값 대입 가능<br>
+	- 재선언 가능<br>
+	- 명명 규칙은 자바와 같음.<br>
+	<br>
+	<b>변수 선언과 사용</b><br>
+	 변수예약어 변수명; <br>
+	 <br>
+	 <span>< button type="button" id="var" ></span>
+	<button type="button" id="var">나이 입력</button>
+	< /button >
+	 <xmp>< script ></xmp>
+	<span class="tag">var currentYear</span>=2025;<br>
+	<span class="tag">var birthYear;<br>
+	var age;</span><br>
+	<br>
+	document.querySelector('#var').onclick=function(){<br>
+	&nbsp;&nbsp;<span class="tag">birthYear</span> = prompt("태어난 연도를 입력하세요 예:2000 ");<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;if( <span class="tag">birthYear</span> === null || <span class="tag">birthYear</span> > "2025" ){<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("다시 입력해주세요");<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;} else {<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert("콘솔창을 확인해주세요.\n(ctrl+shift+j)");<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">age</span> = <span class="tag">currentYear</span> - <span class="tag">birthYear</span>;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log("올해는 "+<span class="tag">currentYear</span>+"년 입니다.\n");<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;console.log(<span class="tag">birthYear</span>+"년에 태어난 사람의 나이는 "+<span class="tag">age</span>+"살 입니다."); <br>
+	&nbsp;&nbsp;&nbsp;&nbsp;}<br>	 
+	&nbsp;&nbsp;}<br>
+	 <xmp></script></xmp>
+
+	 <hr width=100%> 
+	 <script>
+		var currentYear=2025; // 기준 연도
+		var birthYear; //태어난 연도 를 입력받아
+		var age; //나이 계산하기
+		
+		document.querySelector('#var').onclick=function(){
+			birthYear = prompt("태어난 연도를 입력하세요 예:2000 "); //prompt로 입력받을 값이 대입됨
+			if( birthYear === null || birthYear > "2025" ){
+				alert("다시 입력해주세요");
+			} else {
+				alert("콘솔창을 확인해주세요.\n(ctrl+shift+j)");
+				age = currentYear-birthYear;
+				console.log("올해는 "+currentYear+"년 입니다.\n");//줄바꿈 기능이 없으므로 ""내 <br>로 줄바꿔줘야함
+				console.log(birthYear+"년에 태어난 사람의 나이는 "+age+"살 입니다."); //변수이름은 "없이 사용, ""과의 연결은+로
+			}
+		}
+	</script>
+ </body>
+</html>

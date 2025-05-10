@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+  </style>
+ </head>
+
+ <body>
+  <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+  <hr width=100% color=skyblue size=3 align=center>
+  <h2>알림창 출력</h2>
+  <p>
+  alert("메시지");<br>
+  :"" 또는 '' 내에 메시지를 입력해야함.<br>
+  </p>
+  - 웹 브라우저에서 알림창을 열어 메시지를 표시<br>
+  -	가장 많이 사용하는 간단한 대화상자<br>
+  <br>
+  < button type="button" <span class="tag">id="alert"</span>>
+  <span><button type="button" id="alert">alert</button></span>
+  < /button >
+  <p>
+    <xmp>< script ></xmp>
+      document.quertySelector(<span class="tag">#alert</span>).onclick = function(){ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">alert("안녕하세요!");</span><br>
+      }<br>
+    <xmp></script></xmp>
+  </p>
+
+  <h2>확인창 출력</h2>
+  <p>
+  confirm("메시지");<br>
+  :큰 따옴표 또는 작은 따옴표를 사용<br>
+  </p>
+  - 버튼이 2개인 창<br>
+  - [확인] [취소] 버튼 중 하나를 클릭할 수 있음<br>
+  - 클릭 결과를 변수에 저장하고 그 값에 따라 프로그램 동작<br>
+  <br>
+  < button type="button" <span class="tag">id="confirm"</span>>
+  <button tyep="button" id="confirm">confirm</button>
+  < /button >
+  <p>
+    <xmp>< script ></xmp>
+      document.quertySelector(<span class="tag">#confirm</span>).onclick = function(){ <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">confirm("확인 또는 취소를 눌러 창을 닫아주세요.");</span><br>
+      }<br>
+    <xmp></script></xmp>
+  </p>
+  <h2>프롬프트 창에서 입력 받기</h2>
+  <p>
+  prompt("메시지");<br>
+  prompt("메시지",값);<br>
+  : (기본)값을 지정할 경우, 텍스트 안에 기본값이 표시됨<br>
+  </p>
+  - 텍스트 입력 부분이 있는 작은 창<br>
+  - 텍스트 창에 간단한 메시지 입력 가능 >> <b>html태그 사용 불가</b><br>
+  - 입력한 내용을 받아, 프로그램에 사용 가능<br>
+
+  <br>
+  < button type="button" <span class="tag">id="alert"</span>>
+  <button type="button" id="prompt">prompt</button>
+  < /button >
+  <xmp>< script ></xmp>
+  document.querySelector(<span class="tag">#prompt</span>).onclick = function(){<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;<span class="tag">prompt("가고 싶은 여행지를 입력해주세요.","시드니");</span><br>
+  }<br>
+  <xmp></script></xmp>
+  
+  <br>
+
+  <hr width=100%> 
+  <script>
+    document.querySelector('#alert').onclick = function(){ //alert() 사용 
+      alert("안녕하세요!");
+    }
+
+    document.querySelector('#confirm').onclick = function(){ //confirm() 사용
+      confirm("확인 또는 취소를 눌러 창을 닫아주세요.");
+    }
+
+    document.querySelector('#prompt').onclick = function(){ //prompt() 사용
+      prompt("가고 싶은 여행지를 입력해주세요.","시드니");
+    }
+  </script>
+ </body>
+</html>

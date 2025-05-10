@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+  </style>
+ </head>
+
+ <body>
+  <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+  <hr width=100% color=skyblue size=3 align=center>
+  <h2>스코프</h2>
+  <b>scope</b>: 해당 변수를 사용할 수 있는 범위<br>
+  <p>
+	- scope에 따라,< script >내 에서 사용 가능한 <b>전역 변수</b>와<br>
+	함수 또는 블럭 내에서 사용 가능한 <b>지역 변수</b>로 구분<br>
+  </p>
+
+  <h2>전역 변수</h2>
+	: < script >내, 함수 외부에서 선언된 변수<br>
+	- 모든 스크립트(전체 코드) 내에서 사용 가능<br>
+
+  <h2>지역 변수</h2>
+  : 함수 또는 블럭{} 내부에서 선언된 변수<br>
+	- 변수가 선언된 <b>함수, {} 외부에서 접근 불가</b><br>
+  <br>
+  <xmp>< script ></xmp>
+  function addNum(){<br>
+	&nbsp;&nbsp;&nbsp;<span class="tag">var sum = 10+20;</span>&nbsp;<= 함수 내 선언&초기화된 지역 변수<br>
+	&nbsp;&nbsp;&nbsp;console.log(<span class="tag">sum</span>); <= 함수 내 사용 가능<br>
+  }<br>
+  addNum(); *함수 정의 후 호출(사용)해줘야함.<br>
+  <span class="tag">//console.log(sum)</span> &nbsp;<= <i>함수 밖에서 변수 사용 불가</i>(지역 변수에 접근 불가, sum is undefined)<br>
+  <xmp></script></xmp>
+
+  <hr width="150px" align="left">
+
+	<p>
+	<b>*키워드 없이 지역 변수 선언시,</b><br>
+	<i>암묵적으로, 전역 변수가 되어 <b>'전역 오염'</b>이 됨</i><br>
+	>>변수 선언시 꼭 키워드를 붙이자!<br>
+	</p>
+	<p>변수 선언시 사용하는 키워드: var, let, const</p>
+	<xmp>< script ></xmp>
+  	function addNum2(){<br>
+	&nbsp;&nbsp;&nbsp;<span class="tag">plus = 30+40;</span>&nbsp;<= 함수 내 키워드 없이 선언된 변수<br>
+	&nbsp;&nbsp;&nbsp;console.log(<span class="tag">plus</span>); <= 함수 내 사용 가능<br>
+  }<br>
+  addNum(); <br>
+  console.log(<span class="tag">plus)</span> &nbsp;<= <i>함수 밖에서도 사용됨</i><br>
+  <xmp></script></xmp>
+	
+	
+
+ <hr width=100%> 
+ <script>
+	//지역변수
+		function addNum(){ //기능 유추 가능하도록 이름짓기
+			var sum = 10+20; //변수 선언 후 값 대입
+		console.log(sum); //콘솔 내 30 출력됨
+	}
+	addNum(); //함수의 호출(사용) - 함수는 스크립트 내 어디서든 사용가능?
+//	console.log(sum); //콘솔 내 sum is not defined 오류
+	//>> sum은 addNum() 함수의 지역변수
+
+	//키워드가 없는 변수
+	function addNum2(){
+			plus = 30+40;
+			console.log(plus);
+		}
+		addNum2(); //함수이름(); : 함수의 호출
+		console.log(plus); //함수 외부에서 접근 가능
+ </script>
+ </body>
+</html>

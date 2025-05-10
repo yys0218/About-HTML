@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+  </style>
+ </head>
+
+ <body>
+  <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+  <hr width=100% color=skyblue size=3 align=center>
+  <h2>웹 브라우저 화면에 출력</h2>
+  <p>document.write("메시지"); </p> <!--System.out.println()과 같은 기능-->
+  - 웹문서(document)로 출력됨 >> 브라우저 창에 보여짐<br>
+  - "" 또는 '' 사용하여 출력할 메시지 작성<br>
+  - <b>"" 안에 html태그 < h2 > , < br >,... </b>사용 가능<br> 
+  <xmp>< script ></xmp>
+  <span class="tag"> document.wirte("< h3 ></span>웹문서에 <span class="tag">< br ></span>출력됩니다.<span class="tag">< /h3 >");</span><br>
+  <xmp></script></xmp>
+  
+  <br><hr width="150px" align="left"><br>
+
+  <b>document.write()활용</b>
+  <p>
+  -prompt()로 데이터 입력 받기 <br>
+  >> 변수에 대입<br>
+  >> document.write()내에서 변수 사용<br>
+  </p>
+  <p>< button type="button" id="domw">
+  <button type="" id="domw">이름 입력</button>
+  < /button ></p>
+  <xmp>< script >
+  document.querySelector('#domw').onclick = function(){ </xmp>
+    <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;let <b>name</b> = prompt("이름을 입력하세요.\n 확인을 누르면 새 페이지가 로딩됩니다."); </span> <br>
+  <xmp>  if(name===null || name==""){
+      alert("다시 입력해주세요.");
+     } else { </xmp>
+    <span class="tag">&nbsp;&nbsp;&nbsp;&nbsp;document.write("< b >< big >"+<b>name</b>+"< /big >< /b >님 안녕하세요.< br >새로고침해주세요.");</span>
+  <xmp>  }
+}
+  </script></xmp>
+  *<i>변수와 "<태그>"의 연결은 +로</i><br>
+  <br>
+  <hr width=100%> 
+  <script>
+    //웹문서에 출력
+    document.write("<h3>웹 문서에 <br>출력됩니다.<h3>");
+
+    //입력받고 dom에 출력/변수 대입
+    document.querySelector('#domw').onclick = function(){ //button을 누르면
+      let name = prompt("이름을 입력하세요.\n 확인을 누르면 새 페이지가 로딩됩니다."); //변수에 prompt에게 받은 값 대입
+      if(name===null || name==""){
+        alert("다시 입력해주세요."); //입력값이 null이거나 공백일 때
+       } else {
+        document.write("<b><big>"+name+"</big></b>님 안녕하세요.<br>새로고침해주세요."); //변수 사용
+      }
+    }
+  </script>
+ </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="kr">
+ <head>
+  <title>About HTML</title>
+  <link rel="stylesheet" href="https://yys0218.github.io/file-back-up/html_style.css">
+  <style>
+  </style>
+ </head>
+
+ <body>
+ <h1 align=center><a href="https://yys0218.github.io/About-HTML/">About HTML</a></h1>
+ <hr width=100% color=skyblue size=3 align=center>
+ <b>자바 스크립트 작성 방법2</b>
+ <h2>외부 파일 생성 후 연결</h2>
+ - css와 마찬가지로, 자바스크립트 소스도 따로 파일을 저장 후 웹문서에 연결하여 사용이 가능<br>
+ >>유지 보수가 편함<br>
+ - <b>.js 확장자명</b> 사용<br>
+<xmp>change_color.js 생성</xmp>
+<span class="tag">
+	var heading = document.querySelector('#head');<br>
+	heading.onclick = function(){ <br>
+	&nbsp;&nbsp;heading.style.color="red"; <br>
+	} <br>
+</span>
+
+
+<h2 id="head"> 자바스크립트 </h2>
+<p id="text">위의 텍스트를 클릭하세요.</p>
+
+
+< script <span class="tag">src="외부 스크립트 파일 경로"</span> >< /script ><br>
+< script <span class="tag">src="https://yys0218.github.io/file-back-up/change_color.js"</span> >< /script>
+ <script src="https://yys0218.github.io/file-back-up/change_color.js"></script>
+ <hr width=100%> 
+</body>
+</html>
